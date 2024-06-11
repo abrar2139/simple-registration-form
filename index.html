@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">You Registration Form</h1>
+    <p id="description">Fill all the inputs with required data</p>
+    <form id="survey-form" method="post" action="https://register-demo.freecodecamp.org">
+        <fieldset>
+            <label id='name-label' for="name">Enter Your Name:<input type="text" id="name" name="name" value="name" required placeholder="Enter Your Name"></label>
+            <label id='email-label' for="email">Enter Your Email:<input type="email" id="email" value="email" name="email" required placeholder="Enter Your Email"></label>
+            <label id='password-label' for="password">Enter Your Password:<input type="password" id="password" value="password" name="Password" placeholder="Enter Your Password" required pattern="[a-z0-5]{8,}"></label>
+        </fieldset>
+        <fieldset>
+            <legend>Account type (required)</legend>
+            <label for="personal"><input type="radio" id="personal" class="inline" name="account-type" checked value="personal" > Personal </label>
+            <label for="business"><input type="radio" id="'business" class="inline" name="account-type" value="business"> business</label>
+        </fieldset>
+        <fieldset>
+            <label for="profile-picture">Upload a profile picture:<input type="file" id="profile-picture" name="file" placeholder="Select Your Profile Picture"></label>
+            <label id='number-label' for="number">Add your age(years):<input id="number" name="number" type="number" placeholder="Enter Your Age" min="16" max="60"></label>
+            <label for="dropdown">
+             How did you here about us?
+                <select name="dropdown" id="dropdown">
+                    <option value="" disabled selected>(select one)</option>
+                    <option value="1">My Website</option>
+                    <option value="2">My Youtube Channel</option>
+                    <option value="3">My forum</option>
+                    <option value="4">Othher</option>
+                </select>
+            </label>
+            <label for="bio">Provide a bio:<textarea type="text" rows="3" cols="30" id="bio" name="bio" placeholder="I like coding on the beach..."></textarea></label>
+        </fieldset>
+        <label for="terms-and-conditions"><input class="inline" required type="checkbox" value="terms-and-conditions" id="terms-and-conditions" name="terms-and-conditions">I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/"> Terms and Conditions</a></label>
+        <label for="notifications"><input class="inline" required type="checkbox" value="notifications" id="notifications" name="notifications">You recieve the important <a href="https://www.freecodecamp.org/news/terms-of-service/"> notificatons </a>from us.</label>
+       <button id="submit" type="submit">Submit</button>
+    </form>
+</body> 
+</html>
